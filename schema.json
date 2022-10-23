@@ -1,0 +1,773 @@
+
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "t_i": {
+      "type": "number"
+    },
+    "t_floor": {
+      "type": "number"
+    },
+    "f_inf": {
+      "type": "number"
+    },
+    "Q_i": {
+      "type": "number"
+    },
+    "V_room": {
+      "type": "number"
+    },
+    "walls": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "wallpieces": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "u": {
+                      "type": "number"
+                    },
+                    "A": {
+                      "type": "number"
+                    },
+                    "A_w": {
+                      "type": "number"
+                    },
+                    "u_w": {
+                      "type": "number"
+                    },
+                    "du": {
+                      "type": "number"
+                    },
+                    "g_w": {
+                      "type": "number"
+                    },
+                    "Orientation": {
+                      "type": "string"
+                    },
+                    "inclination": {
+                      "type": "number"
+                    },
+                    "specificHeat": {
+                      "type": "number"
+                    },
+                    "outer_absorbtance": {
+                      "type": "number"
+                    },
+                    "outer_u_value": {
+                      "type": "number"
+                    },
+                    "facing": {
+                      "type": "string"
+                    },
+                    "heated": {
+                      "type": "integer"
+                    },
+                    "receivingSolar": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "u",
+                    "A",
+                    "A_w",
+                    "u_w",
+                    "du",
+                    "g_w",
+                    "Orientation",
+                    "inclination",
+                    "specificHeat",
+                    "outer_absorbtance",
+                    "outer_u_value",
+                    "facing",
+                    "heated",
+                    "receivingSolar"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "wallpieces"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "wallpieces": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "u": {
+                      "type": "number"
+                    },
+                    "A": {
+                      "type": "number"
+                    },
+                    "A_w": {
+                      "type": "number"
+                    },
+                    "u_w": {
+                      "type": "number"
+                    },
+                    "du": {
+                      "type": "number"
+                    },
+                    "g_w": {
+                      "type": "number"
+                    },
+                    "Orientation": {
+                      "type": "string"
+                    },
+                    "inclination": {
+                      "type": "number"
+                    },
+                    "specificHeat": {
+                      "type": "number"
+                    },
+                    "outer_absorbtance": {
+                      "type": "number"
+                    },
+                    "outer_u_value": {
+                      "type": "number"
+                    },
+                    "facing": {
+                      "type": "string"
+                    },
+                    "heated": {
+                      "type": "integer"
+                    },
+                    "receivingSolar": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "u",
+                    "A",
+                    "A_w",
+                    "u_w",
+                    "du",
+                    "g_w",
+                    "Orientation",
+                    "inclination",
+                    "specificHeat",
+                    "outer_absorbtance",
+                    "outer_u_value",
+                    "facing",
+                    "heated",
+                    "receivingSolar"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "wallpieces"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "wallpieces": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "u": {
+                      "type": "number"
+                    },
+                    "A": {
+                      "type": "number"
+                    },
+                    "A_w": {
+                      "type": "number"
+                    },
+                    "u_w": {
+                      "type": "number"
+                    },
+                    "du": {
+                      "type": "number"
+                    },
+                    "g_w": {
+                      "type": "number"
+                    },
+                    "Orientation": {
+                      "type": "string"
+                    },
+                    "inclination": {
+                      "type": "number"
+                    },
+                    "specificHeat": {
+                      "type": "number"
+                    },
+                    "outer_absorbtance": {
+                      "type": "number"
+                    },
+                    "outer_u_value": {
+                      "type": "number"
+                    },
+                    "facing": {
+                      "type": "string"
+                    },
+                    "heated": {
+                      "type": "integer"
+                    },
+                    "receivingSolar": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "u",
+                    "A",
+                    "A_w",
+                    "u_w",
+                    "du",
+                    "g_w",
+                    "Orientation",
+                    "inclination",
+                    "specificHeat",
+                    "outer_absorbtance",
+                    "outer_u_value",
+                    "facing",
+                    "heated",
+                    "receivingSolar"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "wallpieces"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "wallpieces": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "u": {
+                      "type": "number"
+                    },
+                    "A": {
+                      "type": "number"
+                    },
+                    "A_w": {
+                      "type": "number"
+                    },
+                    "u_w": {
+                      "type": "number"
+                    },
+                    "du": {
+                      "type": "number"
+                    },
+                    "g_w": {
+                      "type": "number"
+                    },
+                    "Orientation": {
+                      "type": "string"
+                    },
+                    "inclination": {
+                      "type": "number"
+                    },
+                    "specificHeat": {
+                      "type": "number"
+                    },
+                    "outer_absorbtance": {
+                      "type": "number"
+                    },
+                    "outer_u_value": {
+                      "type": "number"
+                    },
+                    "facing": {
+                      "type": "string"
+                    },
+                    "heated": {
+                      "type": "integer"
+                    },
+                    "receivingSolar": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "u",
+                    "A",
+                    "A_w",
+                    "u_w",
+                    "du",
+                    "g_w",
+                    "Orientation",
+                    "inclination",
+                    "specificHeat",
+                    "outer_absorbtance",
+                    "outer_u_value",
+                    "facing",
+                    "heated",
+                    "receivingSolar"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "wallpieces"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "wallpieces": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "u": {
+                      "type": "number"
+                    },
+                    "A": {
+                      "type": "number"
+                    },
+                    "A_w": {
+                      "type": "number"
+                    },
+                    "u_w": {
+                      "type": "number"
+                    },
+                    "du": {
+                      "type": "number"
+                    },
+                    "g_w": {
+                      "type": "number"
+                    },
+                    "Orientation": {
+                      "type": "string"
+                    },
+                    "inclination": {
+                      "type": "number"
+                    },
+                    "specificHeat": {
+                      "type": "number"
+                    },
+                    "outer_absorbtance": {
+                      "type": "number"
+                    },
+                    "outer_u_value": {
+                      "type": "number"
+                    },
+                    "facing": {
+                      "type": "string"
+                    },
+                    "heated": {
+                      "type": "integer"
+                    },
+                    "receivingSolar": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "u",
+                    "A",
+                    "A_w",
+                    "u_w",
+                    "du",
+                    "g_w",
+                    "Orientation",
+                    "inclination",
+                    "specificHeat",
+                    "outer_absorbtance",
+                    "outer_u_value",
+                    "facing",
+                    "heated",
+                    "receivingSolar"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "u": {
+                      "type": "number"
+                    },
+                    "A": {
+                      "type": "number"
+                    },
+                    "A_w": {
+                      "type": "number"
+                    },
+                    "u_w": {
+                      "type": "number"
+                    },
+                    "du": {
+                      "type": "number"
+                    },
+                    "g_w": {
+                      "type": "number"
+                    },
+                    "Orientation": {
+                      "type": "string"
+                    },
+                    "inclination": {
+                      "type": "number"
+                    },
+                    "specificHeat": {
+                      "type": "number"
+                    },
+                    "outer_absorbtance": {
+                      "type": "number"
+                    },
+                    "outer_u_value": {
+                      "type": "number"
+                    },
+                    "facing": {
+                      "type": "string"
+                    },
+                    "heated": {
+                      "type": "integer"
+                    },
+                    "receivingSolar": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "u",
+                    "A",
+                    "A_w",
+                    "u_w",
+                    "du",
+                    "g_w",
+                    "Orientation",
+                    "inclination",
+                    "specificHeat",
+                    "outer_absorbtance",
+                    "outer_u_value",
+                    "facing",
+                    "heated",
+                    "receivingSolar"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "u": {
+                      "type": "number"
+                    },
+                    "A": {
+                      "type": "number"
+                    },
+                    "A_w": {
+                      "type": "number"
+                    },
+                    "u_w": {
+                      "type": "number"
+                    },
+                    "du": {
+                      "type": "number"
+                    },
+                    "g_w": {
+                      "type": "number"
+                    },
+                    "Orientation": {
+                      "type": "string"
+                    },
+                    "inclination": {
+                      "type": "number"
+                    },
+                    "specificHeat": {
+                      "type": "number"
+                    },
+                    "outer_absorbtance": {
+                      "type": "number"
+                    },
+                    "outer_u_value": {
+                      "type": "number"
+                    },
+                    "facing": {
+                      "type": "string"
+                    },
+                    "heated": {
+                      "type": "integer"
+                    },
+                    "receivingSolar": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "u",
+                    "A",
+                    "A_w",
+                    "u_w",
+                    "du",
+                    "g_w",
+                    "Orientation",
+                    "inclination",
+                    "specificHeat",
+                    "outer_absorbtance",
+                    "outer_u_value",
+                    "facing",
+                    "heated",
+                    "receivingSolar"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "u": {
+                      "type": "number"
+                    },
+                    "A": {
+                      "type": "number"
+                    },
+                    "A_w": {
+                      "type": "number"
+                    },
+                    "u_w": {
+                      "type": "number"
+                    },
+                    "du": {
+                      "type": "number"
+                    },
+                    "g_w": {
+                      "type": "number"
+                    },
+                    "Orientation": {
+                      "type": "string"
+                    },
+                    "inclination": {
+                      "type": "number"
+                    },
+                    "specificHeat": {
+                      "type": "number"
+                    },
+                    "outer_absorbtance": {
+                      "type": "number"
+                    },
+                    "outer_u_value": {
+                      "type": "number"
+                    },
+                    "facing": {
+                      "type": "string"
+                    },
+                    "heated": {
+                      "type": "integer"
+                    },
+                    "receivingSolar": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "u",
+                    "A",
+                    "A_w",
+                    "u_w",
+                    "du",
+                    "g_w",
+                    "Orientation",
+                    "inclination",
+                    "specificHeat",
+                    "outer_absorbtance",
+                    "outer_u_value",
+                    "facing",
+                    "heated",
+                    "receivingSolar"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "wallpieces"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "wallpieces": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "u": {
+                      "type": "number"
+                    },
+                    "A": {
+                      "type": "number"
+                    },
+                    "A_w": {
+                      "type": "number"
+                    },
+                    "u_w": {
+                      "type": "number"
+                    },
+                    "du": {
+                      "type": "number"
+                    },
+                    "g_w": {
+                      "type": "number"
+                    },
+                    "Orientation": {
+                      "type": "string"
+                    },
+                    "inclination": {
+                      "type": "number"
+                    },
+                    "specificHeat": {
+                      "type": "number"
+                    },
+                    "outer_absorbtance": {
+                      "type": "number"
+                    },
+                    "outer_u_value": {
+                      "type": "number"
+                    },
+                    "facing": {
+                      "type": "string"
+                    },
+                    "heated": {
+                      "type": "integer"
+                    },
+                    "receivingSolar": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "u",
+                    "A",
+                    "A_w",
+                    "u_w",
+                    "du",
+                    "g_w",
+                    "Orientation",
+                    "inclination",
+                    "specificHeat",
+                    "outer_absorbtance",
+                    "outer_u_value",
+                    "facing",
+                    "heated",
+                    "receivingSolar"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "u": {
+                      "type": "number"
+                    },
+                    "A": {
+                      "type": "number"
+                    },
+                    "A_w": {
+                      "type": "number"
+                    },
+                    "u_w": {
+                      "type": "number"
+                    },
+                    "du": {
+                      "type": "number"
+                    },
+                    "g_w": {
+                      "type": "number"
+                    },
+                    "Orientation": {
+                      "type": "string"
+                    },
+                    "inclination": {
+                      "type": "number"
+                    },
+                    "specificHeat": {
+                      "type": "number"
+                    },
+                    "outer_absorbtance": {
+                      "type": "number"
+                    },
+                    "outer_u_value": {
+                      "type": "number"
+                    },
+                    "facing": {
+                      "type": "string"
+                    },
+                    "heated": {
+                      "type": "integer"
+                    },
+                    "receivingSolar": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "u",
+                    "A",
+                    "A_w",
+                    "u_w",
+                    "du",
+                    "g_w",
+                    "Orientation",
+                    "inclination",
+                    "specificHeat",
+                    "outer_absorbtance",
+                    "outer_u_value",
+                    "facing",
+                    "heated",
+                    "receivingSolar"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "wallpieces"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "t_i",
+    "t_floor",
+    "f_inf",
+    "Q_i",
+    "V_room",
+    "walls"
+  ]
+}
+
