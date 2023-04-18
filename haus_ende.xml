@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<n1:EnEV-Energieausweis xmlns:n1="https://energieausweis.dibt.de/schema/Kontrollsystem_Versionsstand_2016-06-30.xsd">
+  <n1:Gebaeudebezogene-Daten>
+    <n1:Projektbezeichnung-Aussteller>erweiterte Version für EPC4SES.eu</n1:Projektbezeichnung-Aussteller>
+    <n1:Gebaeudeadresse-Strasse-Nr>...traße nn </n1:Gebaeudeadresse-Strasse-Nr>
+    <n1:Gebaeudeadresse-Postleitzahl>10...</n1:Gebaeudeadresse-Postleitzahl>
+    <n1:Gebaeudeadresse-Ort>Berlin</n1:Gebaeudeadresse-Ort>
+    <n1:Ausstellervorname></n1:Ausstellervorname>
+    <n1:Ausstellername></n1:Ausstellername>
+    <n1:Aussteller-Bezeichnung></n1:Aussteller-Bezeichnung>
+    <n1:Aussteller-Strasse-Nr></n1:Aussteller-Strasse-Nr>
+    <n1:Aussteller-PLZ></n1:Aussteller-PLZ>
+    <n1:Aussteller-Ort>Berlin</n1:Aussteller-Ort>
+    <n1:Zusatzinfos-beigefuegt>false</n1:Zusatzinfos-beigefuegt>
+    <n1:CO2-Emissionen></n1:CO2-Emissionen>
+    <n1:Angaben-erhaeltlich></n1:Angaben-erhaeltlich>
+    <n1:Ergaenzdende-Erlaeuterungen>erweitert um Wärmekapazität und Neigung</n1:Ergaenzdende-Erlaeuterungen>
+  </n1:Gebaeudebezogene-Daten>
+  <n1:Energieausweis-Daten EnEV-Version="" Rechtsstand="">
+    <n1:Registriernummer></n1:Registriernummer>
+    <n1:Ausstellungsdatum></n1:Ausstellungsdatum>
+    <n1:Bundesland>Berlin</n1:Bundesland>
+    <n1:Postleitzahl>10...</n1:Postleitzahl>
+    <n1:Gebaeudeteil>ganzes Gebäude</n1:Gebaeudeteil>
+    <n1:Baujahr-Gebaeude>2017</n1:Baujahr-Gebaeude>
+    <n1:Altersklasse-Gebaeude>ab 2016</n1:Altersklasse-Gebaeude>
+    <n1:Baujahr-Waermeerzeuger>2017</n1:Baujahr-Waermeerzeuger>
+    <n1:Altersklasse-Waermeerzeuger>ab 2016</n1:Altersklasse-Waermeerzeuger>
+    <n1:wesentliche-Energietraeger>Nah- /Fernwärme aus Kraft-Wärme-Kopplung</n1:wesentliche-Energietraeger>
+    <n1:Erneuerbare-Art>keine</n1:Erneuerbare-Art>
+    <n1:Erneuerbare-Verwendung>keine</n1:Erneuerbare-Verwendung>
+    <n1:Lueftungsart-Fensterlueftung>true</n1:Lueftungsart-Fensterlueftung>
+    <n1:Lueftungsart-Schachtlueftung>false</n1:Lueftungsart-Schachtlueftung>
+    <n1:Lueftungsart-Anlage-o-WRG>false</n1:Lueftungsart-Anlage-o-WRG>
+    <n1:Lueftungsart-Anlage-m-WRG>false</n1:Lueftungsart-Anlage-m-WRG>
+    <n1:Anlage-zur-Kuehlung>false</n1:Anlage-zur-Kuehlung>
+    <n1:Ausstellungsanlass>Sonstiges</n1:Ausstellungsanlass>
+    <n1:Datenerhebung-Aussteller>false</n1:Datenerhebung-Aussteller>
+    <n1:Datenerhebung-Eigentuemer>true</n1:Datenerhebung-Eigentuemer>
+    <n1:Wohngebaeude>
+      <n1:Gebaeudetyp>Einfamilienhaus</n1:Gebaeudetyp>
+      <n1:Anzahl-Wohneinheiten>1</n1:Anzahl-Wohneinheiten>
+      <n1:Gebaeudenutzflaeche>103</n1:Gebaeudenutzflaeche>
+      <n1:Bedarfswerte-4108-4701>
+        <n1:Wohngebaeude-Anbaugrad>beidseitig angebaut</n1:Wohngebaeude-Anbaugrad>
+        <n1:Bruttovolumen Quelle="aus xlsx">447</n1:Bruttovolumen>
+        <n1:durchschnittliche-Geschosshoehe>2.98</n1:durchschnittliche-Geschosshoehe>
+		<n1:Luftwechselzahl einheit="h-1">0.5</n1:Luftwechselzahl>
+        <n1:Bauteil-Opak>
+          <n1:Flaechenbezeichnung>Außenwände Süd</n1:Flaechenbezeichnung>
+          <n1:Flaeche Quelle="aus xlsx">53</n1:Flaeche>
+          <n1:U-Wert>0.500</n1:U-Wert>
+          <n1:Ausrichtung>S</n1:Ausrichtung>
+		  <n1:spezMasse einheit="kg/m2">180</n1:spezMasse>
+		  <n1:spezDichte einheit="kg/m3">600</n1:spezDichte>
+		   <n1:spezWaerme einheit="J/kg">800</n1:spezWaerme>
+          <n1:grenztAn>Aussenluft</n1:grenztAn>
+        </n1:Bauteil-Opak>
+         <n1:Bauteil-Opak>
+          <n1:Flaechenbezeichnung>Außenwände Nord</n1:Flaechenbezeichnung>
+          <n1:Flaeche Quelle="aus xlsx">56</n1:Flaeche>
+          <n1:U-Wert>0.500</n1:U-Wert>
+          <n1:Ausrichtung>S</n1:Ausrichtung>
+		  <n1:spezMasse einheit="kg/m2">180</n1:spezMasse>
+		  <n1:spezDichte einheit="kg/m3">600</n1:spezDichte>
+		   <n1:spezWaerme einheit="J/kg">800</n1:spezWaerme>
+          <n1:grenztAn>Aussenluft</n1:grenztAn>
+        </n1:Bauteil-Opak>
+                <n1:Bauteil-Opak>
+          <n1:Flaechenbezeichnung>Außenwände adiabat</n1:Flaechenbezeichnung>
+          <n1:Flaeche Quelle="aus xlsx">88.5</n1:Flaeche>
+          <n1:U-Wert>0.500</n1:U-Wert>
+          <n1:Ausrichtung>W</n1:Ausrichtung>
+		  <n1:spezMasse einheit="kg/m2">180</n1:spezMasse>
+		  <n1:spezDichte einheit="kg/m3">600</n1:spezDichte>
+		   <n1:spezWaerme einheit="J/kg">800</n1:spezWaerme>
+          <n1:grenztAn>beheizt</n1:grenztAn>
+        </n1:Bauteil-Opak>
+        <n1:Bauteil-Opak>
+          <n1:Flaechenbezeichnung>Außenwände W oder O</n1:Flaechenbezeichnung>
+          <n1:Flaeche Quelle="aus xlsx">88.5</n1:Flaeche>
+          <n1:U-Wert>0.500</n1:U-Wert>
+          <n1:Ausrichtung>W</n1:Ausrichtung>
+		  <n1:spezMasse einheit="kg/m2">180</n1:spezMasse>
+		  <n1:spezDichte einheit="kg/m3">600</n1:spezDichte>
+		   <n1:spezWaerme einheit="J/kg">800</n1:spezWaerme>
+          <n1:grenztAn>Aussenluft</n1:grenztAn>
+        </n1:Bauteil-Opak>
+       <n1:Bauteil-Opak>
+          <n1:Flaechenbezeichnung>Boden/Erdreich</n1:Flaechenbezeichnung>
+          <n1:Flaeche Quelle="aus xlsx">62</n1:Flaeche>
+          <n1:U-Wert>0.600</n1:U-Wert>
+          <n1:Ausrichtung>HOR</n1:Ausrichtung>
+          <n1:grenztAn>Erdreich</n1:grenztAn>
+    	  <n1:spezMasse einheit="kg/m2">500</n1:spezMasse>
+		  <n1:spezDichte einheit="kg/m3">1700</n1:spezDichte>
+		   <n1:spezWaerme einheit="J/kg">800</n1:spezWaerme>
+        </n1:Bauteil-Opak>
+        <n1:Bauteil-Opak>
+          <n1:Flaechenbezeichnung>Zwischendecken</n1:Flaechenbezeichnung>
+          <n1:Flaeche Quelle="aus xlsx">123</n1:Flaeche>
+          <n1:Ausrichtung>HOR</n1:Ausrichtung>
+          <n1:grenztAn>beheizt</n1:grenztAn>
+    	  <n1:spezMasse einheit="kg/m2">200</n1:spezMasse>
+		  <n1:spezDichte einheit="kg/m3">350</n1:spezDichte>
+		   <n1:spezWaerme einheit="J/kg">800</n1:spezWaerme>
+        </n1:Bauteil-Opak>
+        <n1:Bauteil-Transparent>
+          <n1:Flaechenbezeichnung>Fenster S</n1:Flaechenbezeichnung>
+          <n1:Flaeche Quelle="aus xlsx">12.2</n1:Flaeche>
+          <n1:U-Wert>1.300</n1:U-Wert>
+          <n1:g-Wert>0.70</n1:g-Wert>
+          <n1:Ausrichtung>S</n1:Ausrichtung>
+		  <n1:Neigung einheit="Grad">90</n1:Neigung>
+        </n1:Bauteil-Transparent>
+        <n1:Bauteil-Transparent>
+          <n1:Flaechenbezeichnung>Fenster N</n1:Flaechenbezeichnung>
+          <n1:Flaeche Quelle="aus xlsx">7.6</n1:Flaeche>
+          <n1:U-Wert>1.300</n1:U-Wert>
+          <n1:g-Wert>0.70</n1:g-Wert>
+          <n1:Ausrichtung>N</n1:Ausrichtung>
+		  <n1:Neigung einheit="Grad">90</n1:Neigung>
+        </n1:Bauteil-Transparent>
+        <n1:Bauteil-Dach>
+          <n1:Flaechenbezeichnung>Warmdach</n1:Flaechenbezeichnung>
+          <n1:Flaeche Quelle="aus xlsx">34.5</n1:Flaeche>
+          <n1:U-Wert>0.300</n1:U-Wert>
+           <n1:spezMasse einheit="kg/m2">40</n1:spezMasse>
+		  <n1:spezDichte einheit="kg/m3">200</n1:spezDichte>
+		   <n1:spezWaerme einheit="J/kg">800</n1:spezWaerme>
+          <n1:grenztAn>Aussenluft</n1:grenztAn>
+    	  </n1:Bauteil-Dach>
+        <n1:Bauteil-Dach>
+          <n1:Flaechenbezeichnung>Terrasse</n1:Flaechenbezeichnung>
+          <n1:Flaeche Quelle="aus xlsx">24</n1:Flaeche>
+          <n1:U-Wert>0.300</n1:U-Wert>
+          <n1:spezMasse einheit="kg/m2">400</n1:spezMasse>
+		  <n1:spezDichte einheit="kg/m3">1600</n1:spezDichte>
+		   <n1:spezWaerme einheit="J/kg">1000</n1:spezWaerme>
+          <n1:grenztAn>Aussenluft</n1:grenztAn>
+    	</n1:Bauteil-Dach>
+        <n1:Waermebrueckenzuschlag>0.10</n1:Waermebrueckenzuschlag>
+        <n1:Transmissionswaermeverlust>253</n1:Transmissionswaermeverlust>
+        <n1:Luftdichtheit>dicht</n1:Luftdichtheit>
+        <n1:Lueftungswaermeverlust>128</n1:Lueftungswaermeverlust>
+        <n1:Solare-Waermegewinne>1580</n1:Solare-Waermegewinne>
+        <n1:Interne-Waermegewinne>4196</n1:Interne-Waermegewinne>
+        <n1:Heizungsanlage>
+          <n1:Waermeerzeuger-Bauweise-4701>Fern-/Nahwärme</n1:Waermeerzeuger-Bauweise-4701>
+          <n1:Nennleistung>0</n1:Nennleistung>
+          <n1:Waermeerzeuger-Baujahr>2017</n1:Waermeerzeuger-Baujahr>
+          <n1:Anzahl-baugleiche>1</n1:Anzahl-baugleiche>
+          <n1:Energietraeger>Nah-/Fernwärme aus KWK, fossiler Brennstoff</n1:Energietraeger>
+          <n1:Primaerenergiefaktor>0.7</n1:Primaerenergiefaktor>
+        </n1:Heizungsanlage>
+        <n1:Pufferspeicher-Nenninhalt>0</n1:Pufferspeicher-Nenninhalt>
+        <n1:Heizkreisauslegungstemperatur>70/55</n1:Heizkreisauslegungstemperatur>
+        <n1:Heizungsanlage-innerhalb-Huelle>true</n1:Heizungsanlage-innerhalb-Huelle>
+        <n1:Trinkwarmwasseranlage>
+          <n1:Trinkwarmwassererzeuger-Bauweise-4701>über Heizungsanlage beheizter Speicher</n1:Trinkwarmwassererzeuger-Bauweise-4701>
+          <n1:Trinkwarmwassererzeuger-Baujahr>2017</n1:Trinkwarmwassererzeuger-Baujahr>
+          <n1:Anzahl-baugleiche>1</n1:Anzahl-baugleiche>
+        </n1:Trinkwarmwasseranlage>
+        <n1:Trinkwarmwasserspeicher-Nenninhalt>120</n1:Trinkwarmwasserspeicher-Nenninhalt>
+        <n1:Trinkwarmwasserverteilung-Zirkulation>true</n1:Trinkwarmwasserverteilung-Zirkulation>
+        <n1:Vereinfachte-Datenaufnahme>true</n1:Vereinfachte-Datenaufnahme>
+        <n1:spezifischer-Transmissionswaermeverlust-Ist>0.60</n1:spezifischer-Transmissionswaermeverlust-Ist>
+        <n1:Endenergiebedarf-Waerme-AN>146.4</n1:Endenergiebedarf-Waerme-AN>
+        <n1:Endenergiebedarf-Hilfsenergie-AN>2.1</n1:Endenergiebedarf-Hilfsenergie-AN>
+        <n1:Primaerenergiebedarf>107.9</n1:Primaerenergiebedarf>
+        <n1:Primaerenergiebedarf-Hoechstwert-Neubau>134.4</n1:Primaerenergiebedarf-Hoechstwert-Neubau>
+        <n1:Energieeffizienzklasse>E</n1:Energieeffizienzklasse>
+      </n1:Bedarfswerte-4108-4701>
+    </n1:Wohngebaeude>
+    <n1:Empfehlungen-moeglich>false</n1:Empfehlungen-moeglich>
+    <n1:Extrablatt-Modernisierung>false</n1:Extrablatt-Modernisierung>
+  </n1:Energieausweis-Daten>
+</n1:EnEV-Energieausweis>
