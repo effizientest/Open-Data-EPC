@@ -1,0 +1,96 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ESCO-Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Heat-Converter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Energy-Type"/>
+              <xs:element type="xs:string" name="Energy-Converter-Type"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Building-Elements">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Bauteil-Opak" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Name-Element"/>
+                    <xs:element type="xs:string" name="Orientation"/>
+                    <xs:element type="xs:string" name="Cost-Renovation"/>
+                    <xs:element type="xs:string" name="faces"/>
+                    <xs:element name="U-Value">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute type="xs:string" name="Comment" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:float" name="Surface"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Bauteil-Transparent" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Name-Element"/>
+                    <xs:element type="xs:string" name="Orientation"/>
+                    <xs:element type="xs:string" name="Cost-Renovation"/>
+                    <xs:element type="xs:string" name="faces"/>
+                    <xs:element name="U-Value">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute type="xs:string" name="Comment" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="g-Value">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute type="xs:string" name="Comment" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:float" name="Surface"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Bauteil-Dach" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Name-Element"/>
+                    <xs:element type="xs:string" name="Orientation"/>
+                    <xs:element type="xs:float" name="Surface"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Basic-Data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Address"/>
+              <xs:element type="xs:string" name="Measures"/>
+              <xs:element type="xs:string" name="Measure-Details"/>
+              <xs:element type="xs:string" name="Maturity"/>
+              <xs:element type="xs:float" name="Interest-Rate"/>
+              <xs:element type="xs:string" name="Cost-Renovation"/>
+              <xs:element type="xs:string" name="Investment"/>
+              <xs:element type="xs:string" name="Funding-Target"/>
+              <xs:element type="xs:string" name="Repayment"/>
+              <xs:element type="xs:string" name="Photo"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
