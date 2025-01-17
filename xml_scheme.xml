@@ -1,0 +1,619 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BuildingEnergyData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="XMLVersion"/>
+        <xs:element name="BuildingIdentification">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="BuildingName"/>
+              <xs:element type="xs:string" name="Address"/>
+              <xs:element type="xs:string" name="Municipality"/>
+              <xs:element type="xs:string" name="PostalCode"/>
+              <xs:element type="xs:string" name="Province"/>
+              <xs:element type="xs:string" name="ClimateZone"/>
+              <xs:element type="xs:string" name="ConstructionYear"/>
+              <xs:element type="xs:string" name="BuildingType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GeneralDataandGeometry">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="NumberOfFloorsAboveGround"/>
+              <xs:element type="xs:byte" name="NumberOfFloorsBelowGround"/>
+              <xs:element name="HabitableSurface">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:float">
+                      <xs:attribute type="xs:string" name="unit"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="VolumeHabitableSpace">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:float">
+                      <xs:attribute type="xs:string" name="unit"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Compactness">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:byte">
+                      <xs:attribute type="xs:string" name="comment"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PercentageHeatedLivableSurface">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:byte">
+                      <xs:attribute type="xs:string" name="unit"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PercentageCooledHabitableSurface">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:byte">
+                      <xs:attribute type="xs:string" name="unit"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:float" name="VentilationResidential"/>
+              <xs:element name="GlassedSurfacePercentage">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:float" name="N"/>
+                    <xs:element type="xs:float" name="E"/>
+                    <xs:element type="xs:float" name="S"/>
+                    <xs:element type="xs:byte" name="V"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="Photo"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ThermalEnvelopeData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OpaqueEnclosures">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Element" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:choice maxOccurs="unbounded" minOccurs="0">
+                          <xs:element type="xs:string" name="Type"/>
+                          <xs:element type="xs:string" name="Name"/>
+                          <xs:element type="xs:string" name="faces"/>
+                          <xs:element name="Surface">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:float">
+                                  <xs:attribute type="xs:string" name="unit" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Absorptivity">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:byte" name="unit" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Transmittance">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:float">
+                                  <xs:attribute type="xs:string" name="comment" use="optional"/>
+                                  <xs:attribute type="xs:string" name="unit" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Layers">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Layer" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Material"/>
+                                      <xs:element name="Thickness">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:float">
+                                              <xs:attribute type="xs:string" name="unit" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="ThermalConductivity">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:float">
+                                              <xs:attribute type="xs:string" name="unit" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Density">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:float">
+                                              <xs:attribute type="xs:string" name="unit" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:float" name="VaporResistanceFactor" minOccurs="0"/>
+                                      <xs:element name="SpecificHeat">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:float">
+                                              <xs:attribute type="xs:string" name="unit" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="comment" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:float" name="Area"/>
+                          <xs:element type="xs:string" name="GetMode"/>
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="comment"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Roof">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Element">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Name"/>
+                          <xs:element type="xs:string" name="Type"/>
+                          <xs:element type="xs:float" name="Surface"/>
+                          <xs:element name="surface_non_usable">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:float">
+                                  <xs:attribute type="xs:string" name="comment"/>
+                                  <xs:attribute type="xs:byte" name="unit"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Orientation">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="comment"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Inclination">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:float">
+                                  <xs:attribute type="xs:string" name="unit"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="comment"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="HollowsAndSkylights">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Element" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Name"/>
+                          <xs:element type="xs:string" name="faces"/>
+                          <xs:element type="xs:string" name="Type"/>
+                          <xs:element type="xs:float" name="Surface"/>
+                          <xs:element name="Overhang">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="unit" use="optional"/>
+                                  <xs:attribute type="xs:string" name="comment" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Transmittance">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:float">
+                                  <xs:attribute type="xs:string" name="unit" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="FactorSolar">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:float">
+                                  <xs:attribute type="xs:string" name="comment" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="Orientation"/>
+                          <xs:element type="xs:byte" name="Inclination"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="comment"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LightingInstallations">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TotalInstalledPower">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:float">
+                      <xs:attribute type="xs:string" name="unit"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Space" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Name"/>
+                    <xs:element name="InstalledPower">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:byte">
+                            <xs:attribute type="xs:string" name="unit" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="EnergyEfficiencyInstallation">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute type="xs:string" name="unit" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="AverageIlluminance">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute type="xs:string" name="unit" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="GetMode"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RenewableEnergies">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Photovoltaic">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="System">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Size">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PeakPower">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:byte">
+                                        <xs:attribute type="xs:string" name="unit"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Area">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:float">
+                                        <xs:attribute type="xs:string" name="unit"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Components">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Modules">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Manufacturer"/>
+                                      <xs:element type="xs:string" name="Model"/>
+                                      <xs:element type="xs:string" name="Technology"/>
+                                      <xs:element type="xs:byte" name="Number"/>
+                                      <xs:element type="xs:string" name="Orientation"/>
+                                      <xs:element type="xs:float" name="Tilt"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Inverters">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Manufacturer"/>
+                                      <xs:element type="xs:string" name="Model"/>
+                                      <xs:element type="xs:byte" name="Number"/>
+                                      <xs:element name="Power">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:short">
+                                              <xs:attribute type="xs:string" name="unit"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:float" name="Efficiency"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Performance">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="AnnualEnergy">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:byte">
+                                        <xs:attribute type="xs:string" name="unit"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:float" name="PerformanceRatio"/>
+                                <xs:element type="xs:float" name="Availability"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="GridConnection">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:short" name="GridVoltage"/>
+                                <xs:element type="xs:byte" name="GridFrequency"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="comment"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CO2Emissions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Global">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:float">
+                      <xs:attribute type="xs:string" name="unit"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:float" name="Heating"/>
+              <xs:element type="xs:string" name="Cooling"/>
+              <xs:element type="xs:float" name="ACS"/>
+              <xs:element type="xs:float" name="ElectricConsumption"/>
+              <xs:element type="xs:float" name="ConsumptionOthers"/>
+              <xs:element name="TotalElectricConsumption">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:byte">
+                      <xs:attribute type="xs:string" name="unit"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="TotalConsumptionOthers">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:byte">
+                      <xs:attribute type="xs:string" name="unit"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="comment"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Rating">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CO2Emissions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Global"/>
+                    <xs:element type="xs:string" name="Heating"/>
+                    <xs:element type="xs:string" name="Cooling"/>
+                    <xs:element type="xs:string" name="ACS"/>
+                    <xs:element name="GlobalScale">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:float" name="A"/>
+                          <xs:element type="xs:float" name="B"/>
+                          <xs:element type="xs:float" name="C"/>
+                          <xs:element type="xs:float" name="D"/>
+                          <xs:element type="xs:float" name="E"/>
+                          <xs:element type="xs:float" name="F"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Demand">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Heating"/>
+                    <xs:element type="xs:string" name="Cooling"/>
+                    <xs:element name="HeatingScale">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:float" name="A"/>
+                          <xs:element type="xs:float" name="B"/>
+                          <xs:element type="xs:float" name="C"/>
+                          <xs:element type="xs:float" name="D"/>
+                          <xs:element type="xs:float" name="E"/>
+                          <xs:element type="xs:float" name="F"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="comment"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="CoolingScale">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:float" name="A"/>
+                          <xs:element type="xs:float" name="B"/>
+                          <xs:element type="xs:float" name="C"/>
+                          <xs:element type="xs:float" name="D"/>
+                          <xs:element type="xs:float" name="E"/>
+                          <xs:element type="xs:float" name="F"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="comment"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PrimaryNonRenewableEnergy">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Global">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="comment"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="Heating"/>
+                    <xs:element type="xs:string" name="Cooling"/>
+                    <xs:element type="xs:string" name="ACS"/>
+                    <xs:element name="GlobalScale">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:float" name="A"/>
+                          <xs:element type="xs:float" name="B"/>
+                          <xs:element type="xs:float" name="C"/>
+                          <xs:element type="xs:float" name="D"/>
+                          <xs:element type="xs:float" name="E"/>
+                          <xs:element type="xs:float" name="F"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="comment"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="comment"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Demand">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BuildingObject">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Global">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute type="xs:string" name="unit"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:float" name="Heating"/>
+                    <xs:element type="xs:string" name="Cooling"/>
+                    <xs:element type="xs:float" name="ACS"/>
+                    <xs:element name="Joint">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute type="xs:string" name="comment"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Requirements">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="HousingHeatingLimit">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute type="xs:string" name="comment"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="HousingCoolingLimit"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
